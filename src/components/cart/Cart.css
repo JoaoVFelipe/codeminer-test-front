@@ -1,0 +1,29 @@
+/*Main card of cart*/
+.card-cart{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header background*/
+.cart-header{
+    background-color: gray;
+}
+
+/*Body background*/
+.cart-body{
+    background-color: lightgray;
+}
+
+/*Cart title text*/
+.cart-title{
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    padding: 20px 30px;
+}
