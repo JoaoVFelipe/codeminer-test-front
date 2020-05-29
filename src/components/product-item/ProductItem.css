@@ -1,51 +1,10 @@
 /*Main card of each item on the cart*/
 .item {
-    padding: 20px 30px;
-    max-height: 50px;
-    display: flex;
+  padding: 20px 30px;
+  max-height: 50px;
+  display: flex;
 
-    outline: black;
-    outline-style: solid;
-    outline-offset: 2px;
+  outline: black;
+  outline-style: solid;
+  outline-offset: 2px;
 }
-
-/*Product image*/
-.image {
-    margin-right: 50px;
-}
-
-/*Name and quantity texts*/
-.name-quantity span {
-    display: block;
-    font-size: 14px;
-    color: black;
-    font-weight: 400;
-}
-
-/*Quantity buttons (add and remove itens from cart)*/
-.quantity {
-}
-
-/*Minus button (quantity)*/
-.minus-btn img {
-    margin-bottom: 3px;
-}
-
-/*Plus button (quantity)*/
-.plus-btn img {
-    margin-top: 2px;
-}
-
-/*Add outline on quantity buttons*/
-button:focus, input:focus {
-    outline:0;
-}
-
-/*Total product price text*/
-.total-price {
-    width: 83px;
-    text-align: center;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-  }
