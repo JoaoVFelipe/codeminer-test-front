@@ -1,11 +1,10 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import './Cart.css'
 import ProductItem from '../product-item/ProductItem.js';
 
-class Cart extends Component {
-    
-    render(){
-      return(  
+const Cart = () => {
+
+    return(  
         <div className="Cart">
             <div class="card-cart">
                 <div class="cart-header">
@@ -20,9 +19,7 @@ class Cart extends Component {
                 </div>
             </div>
         </div>
-        )
-    }
+    );
+};
   
-  }
-  
-  export default Cart;
+export default Cart;

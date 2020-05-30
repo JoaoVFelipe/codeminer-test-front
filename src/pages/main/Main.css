@@ -1,3 +1,25 @@
 .Main{
     height: 100%;
 }
+
+.main-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: blue;
+}
+
+.header{
+    background-color: red;
+    grid-area: 1 / 1 / span 1 / span 3;
+
+}
+
+.products{
+    background-color: green;
+    grid-area: 2 / 1 / span 3 / span 2;
+}
+
+.cart{
+    background-color: orange;
+    grid-area: 2 / 3 / span 3 / span 1;
+}

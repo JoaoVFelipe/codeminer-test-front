@@ -1,23 +1,29 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import Header from '../../components/header/Header';
-import Product from '../../components/product/Product';
 import Cart from '../../components/cart/Cart';
+import Products from '../../components/products/Products';
 import './Main.css'
 
 
-class Main extends Component {
+const Main = () => {
 
-//Just rendering each component to test
-  render(){
-    return(  
-      <div className="Main">
+  return(  
+    <div className="Main">
+      <div class="main-grid">
+        <div class="header">
           <Header />
-          <Product />
-          <Cart />
-      </div>
-      )
-  }
+        </div>
 
-}
+        <div class="products">
+          <Products />
+        </div>
+          
+        <div class="cart">
+          <Cart />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Main;
