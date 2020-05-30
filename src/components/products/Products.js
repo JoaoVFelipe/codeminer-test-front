@@ -1,16 +1,26 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from 'react-redux';
 import "./Products.css";
 import ProductCard from "../product-card/ProductCard";
 import { ProductService } from "../../services/ProductService";
 
-const Products = () => {
-    const [products, setProducts] = useState([]);
+const Products = (props) => {
+    const products = useSelector(state => state.listProducts);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         async function fetchData() {
-            setProducts(await ProductService.getProducts());
+            await ProductService.getProducts().then(data => {
+                if(data){
+                    dispatch({type: 'SET_PRODUCTS', listProducts: data.products});
+                }
+                else{
+                    console.log("Um erro ocorreu, não foi possível recuperar a lista de produtos.");
+                    dispatch({type: 'SET_PRODUCTS', listProducts: []});
+                }
+                
+            });
         }
-
         fetchData();
     }, []);
 

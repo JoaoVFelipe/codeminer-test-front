@@ -1,8 +1,15 @@
-import React from 'react';
+import React,  {useState} from 'react';
+import {useSelector} from 'react-redux'
 import './Cart.css'
 import ProductItem from '../product-item/ProductItem.js';
 
-const Cart = () => {
+
+const Cart = (props) => {
+    const productsItemList = useSelector(state => state.listProductsInCart);
+
+    function renderProductItem(product){
+        return <div class="products-itens" key={product.id}> <ProductItem productData={product} /> </div>
+    }
 
     return(  
         <div className="Cart">
@@ -14,8 +21,7 @@ const Cart = () => {
                 </div>
 
                 <div class="cart-body">
-                    <ProductItem />
-                    <ProductItem />
+                    {productsItemList.map(renderProductItem)}
                 </div>
             </div>
         </div>
