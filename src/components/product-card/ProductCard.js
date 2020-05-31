@@ -21,6 +21,7 @@ const ProductCard = (props) => {
       if(productInCart.id === props.productData.id){
         _return = true;
       }
+      return _return;
     });
     return _return;
   }
@@ -30,7 +31,7 @@ const ProductCard = (props) => {
         <div class="card">
             <DefaultImage/>
             <h1>{props.productData.name}</h1>
-            <p class="price-ammount">${props.productData.price},00 - {props.productData.available} left</p>
+            <p class="price-ammount">${props.productData.price},00 ::: {props.productData.available} left</p>
             <p><button onClick={addProductToCart}>Add to Cart</button></p>
         </div>
     </div>

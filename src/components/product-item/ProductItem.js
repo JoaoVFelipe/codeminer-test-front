@@ -11,7 +11,7 @@ const ProductItem = (props) => {
 
   function removeItem(){
     dispatch({type: 'UPDATE_AMMOUNT_REMOVE_FROM_CART', product: props.productData});
-    if(props.productData.quantity == 1){
+    if(props.productData.quantity === 1){
       dispatch({type: 'REMOVE_FROM_CART', product: props.productData});
     }
   } 
