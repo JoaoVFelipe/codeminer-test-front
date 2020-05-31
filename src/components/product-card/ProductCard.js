@@ -7,14 +7,15 @@ const ProductCard = (props) => {
   const productsInCart = useSelector(state => state.listProductsInCart);
   const dispatch = useDispatch();
 
+  //Function to add product on cart
   function addProductToCart(){
     if(!checkProductAlreadyOnCart()){
       dispatch({type: 'ADD_TO_CART', product: props.productData});
     }
     dispatch({type: 'UPDATE_AMMOUNT_ADD_TO_CART', product: props.productData});
   }
-  
 
+  //Check if the product is already on cart. If is the case, the add function only up the quantity;
   function checkProductAlreadyOnCart(){
     let _return = false;
     productsInCart.map((productInCart) => {
@@ -30,9 +31,14 @@ const ProductCard = (props) => {
     <div className="Product">
         <div class="card">
             <DefaultImage/>
-            <h1>{props.productData.name}</h1>
-            <p class="price-ammount">${props.productData.price},00 ::: {props.productData.available} left</p>
-            <p><button onClick={addProductToCart}>Add to Cart</button></p>
+            <div class="name">
+              {props.productData.name}
+            </div>
+            
+            <div>
+              <p class="price-ammount">${props.productData.price},00  ·  {props.productData.available} left</p>
+              <p><button onClick={addProductToCart}>Add to Cart</button></p>
+            </div>
         </div>
     </div>
   );

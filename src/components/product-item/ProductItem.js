@@ -1,5 +1,7 @@
 import React from "react";
 import {useDispatch} from 'react-redux';
+import { ReactComponent as DefaultImage } from "../../assets/default-grey.svg";
+
 import "./ProductItem.css";
 
 const ProductItem = (props) => {
@@ -20,7 +22,7 @@ const ProductItem = (props) => {
     <div className="ProductItem">
       <div class="item">
           <div class="image">
-              IMAGE
+              <DefaultImage />
           </div>
 
           <div class="details">

@@ -7,7 +7,6 @@ import store from '../../store';
 
 import './Main.css'
 
-
 const Main = () => {
 
   return(  

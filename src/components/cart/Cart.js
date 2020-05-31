@@ -63,8 +63,6 @@ const Cart = (props) => {
                     else{
                         setShipping(CartService.calcShipping(listProductItens, subTotal))
                     }
-
-                   
                    break;
             }
         });

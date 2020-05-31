@@ -1,25 +1,28 @@
+/*Main page configuration*/
 .Main{
     height: 100%;
 }
 
+/*Main page grid*/
 .main-grid{
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: blue;
 }
 
+/*Header block*/
 .header{
-    background-color: red;
+    background-color: #D51F06;
     grid-area: 1 / 1 / span 1 / span 3;
-
 }
 
+/*Products block*/
 .products{
-    background-color: green;
+    background-color: #FFFFFF;
     grid-area: 2 / 1 / span 3 / span 2;
 }
 
+/*Shopping cart block*/
 .cart{
-    background-color: orange;
+    background-color: #FFFFFF;
     grid-area: 2 / 3 / span 3 / span 1;
 }

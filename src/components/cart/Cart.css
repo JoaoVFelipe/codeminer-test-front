@@ -4,7 +4,6 @@
     max-width: 500px;
     margin: auto;
     text-align: center;
-    font-family: arial;
 
     display: flex;
     flex-direction: column;
@@ -23,7 +22,6 @@
 /*Cart title text*/
 .cart-title{
     text-align: center;
-    font-family: arial;
     font-weight: bold;
     padding: 20px 30px;
 }
