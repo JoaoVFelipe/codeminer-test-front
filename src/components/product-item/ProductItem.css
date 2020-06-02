@@ -1,31 +1,26 @@
 /*Main card of each item on the cart*/
 .item {
-  padding: 20px 30px;
-  max-height: 50px;
-  display: flex;
+  max-height: 70px;
+  border: 1px solid black;
 
-  outline: black;
-  outline-style: solid;
-  outline-offset: 2px;
-}
-.item {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #B2B2B2;
+  background-color: #b2b2b2;
 }
 
-.image{
-  background-color: #B2B2B2;
+.image {
+  background-color: #b2b2b2;
   grid-area: 1 / 1 / span 1 / span 1;
 
-  size: 30px;
+  max-height: 70px;
+  max-width: 70px;
 }
 
-.details{
-  background-color: #B2B2B2;
+.details {
+  background-color: #b2b2b2;
 }
 
-.ammount-select{
-  background-color: #B2B2B2;
+.ammount-select {
+  background-color: #b2b2b2;
   grid-area: 1 / 3 / span 1 / span 1;
 }
