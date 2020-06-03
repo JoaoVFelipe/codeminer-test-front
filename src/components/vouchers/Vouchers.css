@@ -1,0 +1,86 @@
+/*paddings to the voucher input area*/
+.vouchers-area{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/*voucher input*/
+.voucher-input{
+    height: 35px;
+    width: 60%;
+    border-radius: 8px;
+    border-width: 0;
+    padding-left: 2%;
+}
+
+/*voucher common button*/
+.voucher-apply{
+    vertical-align: middle;
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-left: 2%;
+
+    cursor: pointer;
+}
+
+/*button when the voucher is succefully applied*/
+.voucher-applied{
+    vertical-align: middle;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-left: 2%;
+
+    cursor: pointer;
+}
+
+/*button when the voucher is not applied*/
+.voucher-not-applied{
+    vertical-align: middle;
+    background-color: #f44336;
+    border: none;
+    color: #FFFFFF;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-left: 2%;
+
+    cursor: pointer;
+}
+
+/*retry reaload functions*/
+.voucher-retry-reload{
+    text-align: center;
+    font-size: 15px;
+    color: #D51F06;
+    margin-top: 5%;
+}
+
+.voucher-try-again{
+    margin-top: 5px;
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 8px;
+}

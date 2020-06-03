@@ -1,5 +1,5 @@
 class VoucherService {
-
+    //Get vouchers from API
     async getVouchers(){
         const response = await fetch('https://shielded-wildwood-82973.herokuapp.com/vouchers.json');
         if(!response.ok){
@@ -9,11 +9,13 @@ class VoucherService {
         return json;
     }
 
+    //Valid the voucher applied
     validVoucher(voucherCode, listVouchers, listAppliedVouchers){
         let exist = false;
         let applied = false;
         let voucherData = {};
 
+        //Verify if it exists
         listVouchers.map((voucher) => {
             if(voucherCode === voucher.code){
                 exist = true;
@@ -22,6 +24,7 @@ class VoucherService {
         });
 
         if(exist){
+            //Verify if isn't already applied
             listAppliedVouchers.map((appliedVoucher) => {
                 if(voucherCode === appliedVoucher.code){
                     applied = true;

@@ -37,7 +37,9 @@ const ProductCard = (props) => {
             
             <div>
               <p class="price-ammount">${props.productData.price},00  ·  {props.productData.available} left</p>
-              <p><button onClick={addProductToCart}>Add to Cart</button></p>
+              {props.productData.available > 0 && <p><button onClick={addProductToCart}>Add to Cart</button></p>}
+
+              {props.productData.available === 0 && <p> <button class="out-stock">Out of Stock</button></p>}
             </div>
         </div>
     </div>

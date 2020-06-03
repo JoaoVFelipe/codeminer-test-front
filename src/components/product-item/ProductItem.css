@@ -1,26 +1,72 @@
 /*Main card of each item on the cart*/
 .item {
-  max-height: 70px;
   border: 1px solid black;
-
+  border-radius: 8px;
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #b2b2b2;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1%;
+  
 }
 
+/*Text showed when the cart is empty*/
+.no-item{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1%;
+}
+
+/*Small image in each card*/
 .image {
   background-color: #b2b2b2;
   grid-area: 1 / 1 / span 1 / span 1;
-
   max-height: 70px;
   max-width: 70px;
 }
 
+/*Details of each card*/
 .details {
   background-color: #b2b2b2;
+  text-align: left;
 }
 
+/*Product name text*/
+.product-name{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+
+/*Price text*/
+.details-price{
+  padding-left: 35%;
+}
+
+/*Buttons to add and remove products*/
 .ammount-select {
   background-color: #b2b2b2;
   grid-area: 1 / 3 / span 1 / span 1;
+  margin-top: 10%;
+}
+
+.ammount-select button{
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-left: 5%;
+
+    cursor: pointer;
+}
+
+.ammount-select button:hover {
+  opacity: 0.7;
 }

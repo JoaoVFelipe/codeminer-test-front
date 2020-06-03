@@ -1,8 +1,9 @@
 /*Main card of cart*/
 .card-cart{
+    position: fixed;
+    right: 20px;
+    width: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin: auto;
     text-align: center;
 
     display: flex;
@@ -17,6 +18,7 @@
 /*Body background*/
 .cart-body{
     background-color: lightgray;
+    padding-top: 4%;
 }
 
 /*Cart title text*/
@@ -24,4 +26,26 @@
     text-align: center;
     font-weight: bold;
     padding: 20px 30px;
+}
+
+/*prices area*/
+.prices{
+    margin-top: 1%;
+    padding-bottom: 2%;
+}
+
+.prices-text{
+    font-size: 15px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 1%;
+    display: inline-block;
+    width: 400px;
+}
+
+.values{
+    display: inline-block;
+    width: 55px;
+    text-align: right;
+    margin-right: 20px;
 }

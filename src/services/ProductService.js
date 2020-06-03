@@ -1,5 +1,6 @@
 class ProductService{
 
+    //Get products from API
     async getProducts(){
         const response = await fetch('https://shielded-wildwood-82973.herokuapp.com/products.json');
         if(!response.ok){

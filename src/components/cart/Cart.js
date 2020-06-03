@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import ProductItem from "../product-item/ProductItem.js";
 import Vouchers from "../vouchers/Vouchers";
 import { CartService } from "../../services/CartService";
@@ -17,14 +17,17 @@ const Cart = (props) => {
 
   const [totalDiscounts, setTotalDiscounts] = useState(0);
 
+  //Update subtotal when the list of itens is updated
   useEffect(() => {
     setSubTotal(CartService.calcSubtotal(listProductItens));
   }, [listProductItens]);
 
+  //Update the shipping price when the subtotal is updated
   useEffect(() => {
     setShipping(CartService.calcShipping(listProductItens, subTotal));
   }, [subTotal]);
 
+  //Calcs the total when subtotal, shipping or discounts changes
   useEffect(() => {
     setTotal(subTotal + shipping);
     setTotalWithDiscounts(
@@ -32,6 +35,7 @@ const Cart = (props) => {
     );
   }, [subTotal, shipping, totalDiscounts]);
 
+  //Calcs the discounts when a new voucher is applied, and when the prices are updated
   useEffect(() => {
     let pDiscounts = 0;
     let fDiscounts = 0;
@@ -85,17 +89,29 @@ const Cart = (props) => {
         </div>
 
         <div class="cart-body">
-          <div class="itens">{listProductItens.map(renderProductItem)}</div>
+          {listProductItens.length > 0 && 
+            <div class="itens">{listProductItens.map(renderProductItem)}</div>
+          }
+          {listProductItens.length === 0 && 
+            <div class="no-itens"> You have no items on your cart yet! Why not buy something?</div>
+          }
 
           <div class="vouchers">
             <Vouchers />
           </div>
 
           <div class="prices">
-            <div>Subtotal: {subTotal}</div>
-            <div>Shipping: {shipping}</div>
-            <div>Discount: {totalDiscounts}</div>
-            <div>Total: {totalWithDiscounts}</div>
+            <span class="prices-text">Subtotal: </span>
+            <span class="values"> $ {subTotal} </span>
+            <hr></hr>
+            <span class="prices-text">Shipping: </span>
+            <span class="values"> $ {shipping} </span>
+            <hr></hr>
+            <span class="prices-text">Discounts: </span>
+            <span class="values"> $ {totalDiscounts} </span>
+            <hr></hr>
+            <span class="prices-text">Total:</span>
+            <span class="values"> $ {totalWithDiscounts} </span>
           </div>
         </div>
       </div>

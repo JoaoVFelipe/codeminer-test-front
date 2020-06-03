@@ -7,10 +7,12 @@ import "./ProductItem.css";
 const ProductItem = (props) => {
   const dispatch = useDispatch();
   
+  //Add one to the ammount of the product in the cart;
   function addItem(){
     dispatch({type: 'UPDATE_AMMOUNT_ADD_TO_CART', product: props.productData});
   }
 
+  //Removes one of the product ammount in the cart; If it haves only one product, remove it from the cart;
   function removeItem(){
     dispatch({type: 'UPDATE_AMMOUNT_REMOVE_FROM_CART', product: props.productData});
     if(props.productData.quantity === 1){
@@ -26,10 +28,10 @@ const ProductItem = (props) => {
           </div>
 
           <div class="details">
-              <div>{props.productData.name}</div>
+              <div class="product-name">{props.productData.name}</div>
               <div>
-                  <span>DETAILS</span>
-                  <span>{props.productData.quantity}</span>
+                  <span class="details-quantity">Quantity: {props.productData.quantity}</span>
+                  <span class="details-price">$ {props.productData.quantity * props.productData.price}</span>
               </div>
           </div>
 
@@ -39,7 +41,7 @@ const ProductItem = (props) => {
               </button>
 
               <button onClick={removeItem}>
-                -
+                  -
               </button>
           </div>
       </div>
