@@ -114,6 +114,9 @@ const Cart = (props) => {
             <span class="values"> $ {totalWithDiscounts} </span>
           </div>
         </div>
+        <div class="cart-button">
+          <button class="submit-button"> CHECKOUT </button>
+        </div>
       </div>
     </div>
   );
